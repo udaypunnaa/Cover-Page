@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Cover Page Generator</h1>
+    <div class="form-generator">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter Your Name"><br>
+
+        <label for="roll-number">Roll Number:</label>
+        <input type="text" id="roll-number" placeholder="Enter Your Name"><br>
+
+        <label for="year-semester">Year/Semester:</label>
+        <input type="text" id="year-semester" placeholder="Enter Your Name"><br>
+
+        <label for="subject">Subject/Subject Code:</label>
+        <input type="text" id="subject" placeholder="Enter Your Name"><br>
+
+        <label for="topic-name">Topic Name:</label>
+        <input type="text" id="topic-name" placeholder="Enter Your Name"><br>
+        <div class="container">
+            <button onclick="generateCover()" id="generate-button">Generate</button>
+        </div>
+
+    </div>
+    <br>
+    <div id="cover-page">
+
+    </div>
+    <br>
+    <button id="download-btn" style="display:none;" onclick="downloadCoverPage()">Download</button>
+    <br><br><br><br>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+</body>
+
+</html>

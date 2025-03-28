@@ -1,0 +1,96 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+@media (min-width: 312px) and (max-width: 767px) {
+    html {
+        background-color: black;
+    }
+
+    #generate-button {
+        margin-top: 18px;
+        width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(64, 64, 200);
+        color: white;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .form-generator {
+        line-height: 2;
+        margin-left: 1%;
+        margin-right: 2%;
+    }
+
+    h3 {
+        padding-left: 220px;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin: 15px;
+}
+
+.form-generator {
+    line-height: 2;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+input {
+    width: 50%;
+    text-align: center;
+    float: right;
+}
+
+#generate-button {
+
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(64, 64, 200);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+#download-btn {
+
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(64, 64, 200);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+h3 {
+    padding-left: 220px;
+}
+
+#cover-page {
+    width: 1920px;
+    height: 1080px;
+    font-size: 59px;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    color: black;
+    overflow-y: scroll;
+    line-height: 60px;
+}

@@ -3,45 +3,80 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Cover Page Generator</title>
     <link rel="stylesheet" href="index.css">
+    <title>Updated Version of Cover Page Generator</title>
 </head>
 
 <body>
-    <h1>Cover Page Generator</h1>
-    <div class="form-generator">
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="Enter Your Name"><br>
 
-        <label for="roll-number">Roll Number:</label>
-        <input type="text" id="roll-number" placeholder="Enter Your Name"><br>
+    <div class="form-container">
+        <h3>Enter Details</h3>
+        <input type="text" id="name" placeholder="Name"><br>
+        <input type="text" id="rollno" placeholder="Roll No"><br>
 
-        <label for="year-semester">Year/Semester:</label>
-        <input type="text" id="year-semester" placeholder="Enter Your Name"><br>
+        <!-- Year / Semester Dropdown -->
+        <select id="yearsem">
+            <option value="">-- Select Year & Semester --</option>
+            <option value="I Year / I Sem">I Year / I Sem</option>
+            <option value="I Year / II Sem">I Year / II Sem</option>
+            <option value="II Year / I Sem">II Year / I Sem</option>
+            <option value="II Year / II Sem">II Year / II Sem</option>
+            <option value="III Year / I Sem">III Year / I Sem</option>
+            <option value="III Year / II Sem">III Year / II Sem</option>
+            <option value="IV Year / I Sem">IV Year / I Sem</option>
+            <option value="IV Year / II Sem">IV Year / II Sem</option>
+        </select><br>
 
-        <label for="subject">Subject/Subject Code:</label>
-        <input type="text" id="subject" placeholder="Enter Your Name"><br>
+        <input type="text" id="subject" placeholder="Subject / Code"><br>
+        <input type="text" id="topic" placeholder="Topic"><br>
+        <button onclick="generateCover()">Generate</button>
+        <button onclick="downloadPNG()">Download PNG</button>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </div>
 
-        <label for="topic-name">Topic Name:</label>
-        <input type="text" id="topic-name" placeholder="Enter Your Name"><br>
-        <div class="container">
-            <button onclick="generateCover()" id="generate-button">Generate</button>
-            <button id="download-btn" style="display:none;" onclick="downloadCoverPage()">Download</button>
+    <div class="cover-container" id="cover">
+        <!-- Background image -->
+        <img src="background.png" class="cover-bg" id="cover-bg">
+        <!-- Text overlay -->
+        <div class="cover-text" id="cover-text">
+            <div>
+                <!-- Department Heading -->
+                <div id="department-heading">DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</div>
+
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td id="out-name"></td>
+                    </tr>
+                    <tr>
+                        <td>Roll No:</td>
+                        <td id="out-rollno"></td>
+                    </tr>
+                    <tr>
+                        <td>Year/Sem:</td>
+                        <td id="out-yearsem"></td>
+                    </tr>
+                    <tr>
+                        <td>Subject/Code:</td>
+                        <td id="out-subject"></td>
+                    </tr>
+                    <tr>
+                        <td>Topic:</td>
+                        <td id="out-topic"></td>
+                    </tr>
+                </table>
+            </div>
         </div>
-
     </div>
-    <br>
-    <div id="cover-page">
 
-    </div>
-    <br>
-
-    <br><br><br><br>
-    <script src="index.js"></script>
+    <!-- Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
+    <script src="index.js">
 
+    </script>
 </body>
 
 </html>
